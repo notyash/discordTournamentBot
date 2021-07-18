@@ -93,13 +93,6 @@ class Functions(commands.Cog):
         guild = ctx.message.guild
 
         for name in names:
-            #     if name == role_names[len(role_names) - 1]:
-            #         roles = [r for r in role_names]
-            #         await ctx.send(f"Roles created: {', '.join(x for x in roles)}")
-            #
-            # else:
-            #     await ctx.send(f"Skipping **{name}** role because there is already a role with same name.")
-
             if role := get(guild.roles, name=f"{name} Role"):
                 e.description = f"Skipping **{name}** because there is already a channel with same name."
                 await ctx.send(embed=e)
