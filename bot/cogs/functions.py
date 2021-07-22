@@ -102,7 +102,6 @@ class Functions(commands.Cog):
             role = await self.create_role_func(guild=guild, r_name=name)
             category = discord.utils.get(guild.categories, name="TOURNAMENTS")
 
-            print("r", role)
             overwrites = {
                 guild.default_role: discord.PermissionOverwrite(read_messages=False),
                 guild.me: discord.PermissionOverwrite(read_messages=True),
